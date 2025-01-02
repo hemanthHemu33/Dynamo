@@ -1,0 +1,100 @@
+@import "../App.css";
+.headerBlock {
+  background: rgb(1, 14, 110);
+  background: radial-gradient(
+    circle,
+    rgba(1, 14, 110, 1) 0%,
+    rgba(57, 1, 112, 1) 52%,
+    rgba(0, 0, 82, 1) 100%
+  );
+
+  padding: calc(1rem + 1px) 1.5rem;
+  color: white;
+  font-family: "Light";
+}
+.headerLogo {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  gap: 3px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style-type: none;
+  /* font-family: "fntRegular"; */
+  font-size: 1.1rem;
+  margin: 0;
+
+  a:hover {
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #9381ff;
+  }
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .headerMenu {
+    position: absolute;
+    display: block;
+    top: 65px;
+    right: -200px;
+    /* background: black; */
+    background: rgba(0, 0, 0, 0.8);
+
+    backdrop-filter: saturate(180%) blur(10px);
+    border-radius: 0 0 0 10px;
+    /* height: 100vh; */
+    height: 33rem;
+    text-align: left;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+
+    li {
+      padding-top: 15px;
+      padding-left: 20px;
+      padding-bottom: 15px;
+      border-bottom: solid 1px rgb(189 168 168 / 15%);
+    }
+
+    a {
+      margin-top: 35px;
+    }
+
+    a:hover {
+      transition: 0.4s ease-in-out;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #9381ff;
+    }
+  }
+
+  .menuclass {
+    right: 0px;
+    transition: 0.5s ease-in-out;
+  }
+}
